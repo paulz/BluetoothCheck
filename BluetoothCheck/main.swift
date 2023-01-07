@@ -18,7 +18,10 @@ let service = arguments[1]
 
 let centralManager = CentralManager()
 
-try await centralManager.waitUntilReady()
+if (try? await centralManager.waitUntilReady()) == nil {
+    print("Not allowed to use Bluetooth")
+    exit(4)
+}
 
 let scanDataStream = try await centralManager.scanForPeripherals(withServices: [CBUUID(string: service)])
 
