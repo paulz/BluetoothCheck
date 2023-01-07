@@ -47,8 +47,8 @@
 		33C97F392969854700B4DFF0 = {
 			isa = PBXGroup;
 			children = (
-				33C97F442969854700B4DFF0 /* BluetoothCheck */,
 				33C97F432969854700B4DFF0 /* Products */,
+				33C97F442969854700B4DFF0 /* BluetoothCheck */,
 			);
 			sourceTree = "<group>";
 		};
