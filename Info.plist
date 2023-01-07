@@ -20,5 +20,7 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSBluetoothAlwaysUsageDescription</key>
 	<string>To check if Bluetooth device is in range</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>To check if Bluetooth device is in range</string>
 </dict>
 </plist>
