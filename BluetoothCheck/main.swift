@@ -17,7 +17,7 @@ if arguments.count < 2 {
 let service = arguments[1]
 
 guard let serviceUUID = UUID(uuidString: service) else {
-    print("No a valid service UUID")
+    print("No a valid service UUID: \(service)")
     exit(5)
 }
 
