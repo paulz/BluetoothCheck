@@ -28,18 +28,35 @@ if (try? await centralManager.waitUntilReady()) == nil {
     exit(4)
 }
 
-let scanDataStream = try await centralManager.scanForPeripherals(withServices: [CBUUID(string: service)])
+let scanDataStream = try await centralManager.scanForPeripherals(withServices: [])
+// CBUUID(string: service)
 
-var exitCode: Int32 = 2
-if let found = await scanDataStream.timeout(for: 10, scheduler: MainAsyncScheduler.default).first() {
-    if let name = found.advertisementData[CBAdvertisementDataLocalNameKey] {
-        print("name:", name)
+
+do {
+    for try await scanData in scanDataStream.timeout(for: 10, scheduler: MainAsyncScheduler.default) {
+
+//        break
+        let found = scanData
+        if let name = found.advertisementData[CBAdvertisementDataLocalNameKey] {
+            print("name:", name)
+            print("RSSI: ", found.rssi)
+        }
     }
-    print("RSSI: ", found.rssi)
-    exitCode = 0
+} catch {
+    await centralManager.stopScan()
+    exit(2)
 }
+//
+//var exitCode: Int32 = 2
+//if let found = await scanDataStream.timeout(for: 10, scheduler: MainAsyncScheduler.default).first() {
+//    if let name = found.advertisementData[CBAdvertisementDataLocalNameKey] {
+//        print("name:", name)
+//    }
+//    print("RSSI: ", found.rssi)
+//    exitCode = 0
+//}
 await centralManager.stopScan()
-exit(exitCode)
+exit(0)
 
 
 extension AsyncSequence {
