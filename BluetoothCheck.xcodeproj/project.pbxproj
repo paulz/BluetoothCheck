@@ -29,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		33AB9B68296A54C400E74C31 /* BluetoothCheckLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothCheckLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		33AB9B7D296A5E8D00E74C31 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		33C97F422969854700B4DFF0 /* BluetoothCheck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BluetoothCheck; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C97F452969854700B4DFF0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		33C97F66296A174C00B4DFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -74,9 +75,10 @@
 		33C97F392969854700B4DFF0 = {
 			isa = PBXGroup;
 			children = (
+				33AB9B7D296A5E8D00E74C31 /* README.md */,
+				33C97F442969854700B4DFF0 /* BluetoothCheck */,
 				33AB9B69296A54C400E74C31 /* BluetoothCheckLauncher */,
 				33C97F432969854700B4DFF0 /* Products */,
-				33C97F442969854700B4DFF0 /* BluetoothCheck */,
 				33AB9B78296A557400E74C31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
