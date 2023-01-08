@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33AB9B77296A555800E74C31 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C97F452969854700B4DFF0 /* main.swift */; };
+		33AB9B7A296A557400E74C31 /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 33AB9B79296A557400E74C31 /* AsyncBluetooth */; };
+		33AB9B7C296A557400E74C31 /* AsyncTimeSequences in Frameworks */ = {isa = PBXBuildFile; productRef = 33AB9B7B296A557400E74C31 /* AsyncTimeSequences */; };
 		33C97F462969854700B4DFF0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C97F452969854700B4DFF0 /* main.swift */; };
 		33C97F4E2969856B00B4DFF0 /* AsyncBluetooth in Frameworks */ = {isa = PBXBuildFile; productRef = 33C97F4D2969856B00B4DFF0 /* AsyncBluetooth */; };
 		33C97F5129698C7700B4DFF0 /* AsyncTimeSequences in Frameworks */ = {isa = PBXBuildFile; productRef = 33C97F5029698C7700B4DFF0 /* AsyncTimeSequences */; };
@@ -25,6 +28,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		33AB9B68296A54C400E74C31 /* BluetoothCheckLauncher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothCheckLauncher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C97F422969854700B4DFF0 /* BluetoothCheck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BluetoothCheck; sourceTree = BUILT_PRODUCTS_DIR; };
 		33C97F452969854700B4DFF0 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		33C97F66296A174C00B4DFF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
@@ -32,6 +36,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		33AB9B65296A54C400E74C31 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AB9B7A296A557400E74C31 /* AsyncBluetooth in Frameworks */,
+				33AB9B7C296A557400E74C31 /* AsyncTimeSequences in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33C97F3F2969854700B4DFF0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,11 +57,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33AB9B69296A54C400E74C31 /* BluetoothCheckLauncher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BluetoothCheckLauncher;
+			sourceTree = "<group>";
+		};
+		33AB9B78296A557400E74C31 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33C97F392969854700B4DFF0 = {
 			isa = PBXGroup;
 			children = (
+				33AB9B69296A54C400E74C31 /* BluetoothCheckLauncher */,
 				33C97F432969854700B4DFF0 /* Products */,
 				33C97F442969854700B4DFF0 /* BluetoothCheck */,
+				33AB9B78296A557400E74C31 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				33C97F422969854700B4DFF0 /* BluetoothCheck */,
+				33AB9B68296A54C400E74C31 /* BluetoothCheckLauncher.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +103,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		33AB9B67296A54C400E74C31 /* BluetoothCheckLauncher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 33AB9B76296A54C500E74C31 /* Build configuration list for PBXNativeTarget "BluetoothCheckLauncher" */;
+			buildPhases = (
+				33AB9B64296A54C400E74C31 /* Sources */,
+				33AB9B65296A54C400E74C31 /* Frameworks */,
+				33AB9B66296A54C400E74C31 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BluetoothCheckLauncher;
+			packageProductDependencies = (
+				33AB9B79296A557400E74C31 /* AsyncBluetooth */,
+				33AB9B7B296A557400E74C31 /* AsyncTimeSequences */,
+			);
+			productName = BluetoothCheckLauncher;
+			productReference = 33AB9B68296A54C400E74C31 /* BluetoothCheckLauncher.app */;
+			productType = "com.apple.product-type.application";
+		};
 		33C97F412969854700B4DFF0 /* BluetoothCheck */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33C97F492969854700B4DFF0 /* Build configuration list for PBXNativeTarget "BluetoothCheck" */;
@@ -104,6 +155,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					33AB9B67296A54C400E74C31 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					33C97F412969854700B4DFF0 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -127,11 +181,30 @@
 			projectRoot = "";
 			targets = (
 				33C97F412969854700B4DFF0 /* BluetoothCheck */,
+				33AB9B67296A54C400E74C31 /* BluetoothCheckLauncher */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		33AB9B66296A54C400E74C31 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		33AB9B64296A54C400E74C31 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				33AB9B77296A555800E74C31 /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		33C97F3E2969854700B4DFF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -143,6 +216,51 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		33AB9B74296A54C500E74C31 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BluetoothCheck/BluetoothCheck.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To check if Bluetooth device is in range";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.paulz.BluetoothCheckLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Debug;
+		};
+		33AB9B75296A54C500E74C31 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BluetoothCheck/BluetoothCheck.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "To check if Bluetooth device is in range";
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = io.github.paulz.BluetoothCheckLauncher;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+			};
+			name = Release;
+		};
 		33C97F472969854700B4DFF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -173,9 +291,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = PFWCB5F4UQ;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -230,9 +351,12 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = PFWCB5F4UQ;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -255,10 +379,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BluetoothCheck/BluetoothCheck.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				DEVELOPMENT_TEAM = PFWCB5F4UQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.paulz.BluetoothCheck;
@@ -270,10 +391,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = BluetoothCheck/BluetoothCheck.entitlements;
-				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
 				CREATE_INFOPLIST_SECTION_IN_BINARY = YES;
-				DEVELOPMENT_TEAM = PFWCB5F4UQ;
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.paulz.BluetoothCheck;
@@ -284,6 +402,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		33AB9B76296A54C500E74C31 /* Build configuration list for PBXNativeTarget "BluetoothCheckLauncher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				33AB9B74296A54C500E74C31 /* Debug */,
+				33AB9B75296A54C500E74C31 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		33C97F3D2969854700B4DFF0 /* Build configuration list for PBXProject "BluetoothCheck" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -324,6 +451,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		33AB9B79296A557400E74C31 /* AsyncBluetooth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33C97F4C2969856B00B4DFF0 /* XCRemoteSwiftPackageReference "AsyncBluetooth" */;
+			productName = AsyncBluetooth;
+		};
+		33AB9B7B296A557400E74C31 /* AsyncTimeSequences */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33C97F4F29698C7700B4DFF0 /* XCRemoteSwiftPackageReference "AsyncTimeSequences" */;
+			productName = AsyncTimeSequences;
+		};
 		33C97F4D2969856B00B4DFF0 /* AsyncBluetooth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 33C97F4C2969856B00B4DFF0 /* XCRemoteSwiftPackageReference "AsyncBluetooth" */;
