@@ -1,0 +1,41 @@
+import Foundation
+import AsyncBluetooth
+import CoreBluetooth
+import AsyncTimeSequences
+
+let arguments = ProcessInfo.processInfo.arguments
+
+if arguments.count != 2 {
+    print(
+    """
+    Usage: BluetoothCheck <Bluetooth service UUID>
+    """
+    )
+    exit(1)
+}
+
+let service = arguments[1]
+
+let centralManager = CentralManager()
+
+try await centralManager.waitUntilReady()
+
+let scanDataStream = try await centralManager.scanForPeripherals(withServices: [CBUUID(string: service)])
+
+var exitCode: Int32 = 2
+if let found = await scanDataStream.timeout(for: 10, scheduler: MainAsyncScheduler.default).first() {
+    if let name = found.advertisementData[CBAdvertisementDataLocalNameKey] {
+        print("name:", name)
+    }
+    print("RSSI: ", found.rssi)
+    exitCode = 0
+}
+await centralManager.stopScan()
+exit(exitCode)
+
+
+extension AsyncSequence {
+    func first() async -> Element? {
+        try? await first(where: { _ in true })
+    }
+}

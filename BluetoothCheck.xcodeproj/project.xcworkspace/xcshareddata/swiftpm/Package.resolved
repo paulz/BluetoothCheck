@@ -1,0 +1,23 @@
+{
+  "pins" : [
+    {
+      "identity" : "asyncbluetooth",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/manolofdez/AsyncBluetooth",
+      "state" : {
+        "revision" : "e9aa79269fd1efd82ba2c173e60b0286455b9ea3",
+        "version" : "1.4.1"
+      }
+    },
+    {
+      "identity" : "asynctimesequences",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Henryforce/AsyncTimeSequences",
+      "state" : {
+        "branch" : "main",
+        "revision" : "e6cd49b87a8d32300b385965d1d4bb9a229cd3ad"
+      }
+    }
+  ],
+  "version" : 2
+}
