@@ -5,7 +5,7 @@ import AsyncTimeSequences
 
 let arguments = ProcessInfo.processInfo.arguments
 
-if arguments.count != 2 {
+if arguments.count < 2 {
     print(
     """
     Usage: BluetoothCheck <Bluetooth service UUID>
@@ -15,6 +15,11 @@ if arguments.count != 2 {
 }
 
 let service = arguments[1]
+
+guard let serviceUUID = UUID(uuidString: service) else {
+    print("No a valid service UUID")
+    exit(5)
+}
 
 let centralManager = CentralManager()
 
