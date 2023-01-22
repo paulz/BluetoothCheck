@@ -58,13 +58,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		33AB9B69296A54C400E74C31 /* BluetoothCheckLauncher */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BluetoothCheckLauncher;
-			sourceTree = "<group>";
-		};
 		33AB9B78296A557400E74C31 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,7 +70,6 @@
 			children = (
 				33AB9B7D296A5E8D00E74C31 /* README.md */,
 				33C97F442969854700B4DFF0 /* BluetoothCheck */,
-				33AB9B69296A54C400E74C31 /* BluetoothCheckLauncher */,
 				33C97F432969854700B4DFF0 /* Products */,
 				33AB9B78296A557400E74C31 /* Frameworks */,
 			);
